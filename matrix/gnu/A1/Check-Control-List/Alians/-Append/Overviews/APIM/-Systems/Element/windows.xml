@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <send-request mode="new" timeout="20" response-variable-name="blobdata" ignore-error="true">
+            <set-url>@((string)context.Variables["BlobFileName"])</set-url>
+            <set-method>PUT</set-method>
+            <set-header name="x-ms-version" exists-action="override">
+                <value>2019-07-07</value>
+            </set-header>
+            <set-header name="x-ms-blob-type" exists-action="override">
+                <value>BlockBlob</value>
+            </set-header>
+            <set-body>@( context.Request.Body.As(preserveContent: true) )</set-body>
+            <authentication-managed-identity resource="https://storage.azure.com" />
+        </send-request>        

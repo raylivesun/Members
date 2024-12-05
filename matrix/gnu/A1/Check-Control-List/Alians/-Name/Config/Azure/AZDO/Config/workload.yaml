@@ -1,0 +1,1003 @@
+project: workload
+name: load
+title: "AZDO config Azure DevOps Load Testing"
+description: "A sample project for load testing Azure DevOps using Azure Load Testing"
+version: "1.0.0"
+
+tasks:
+- task: AzureDevOpsLoadTest@5
+  displayName: 'Start Load Test'
+  inputs:
+    azureSubscription: 'Azure DevOps Service Connection'
+    azureDevOpsProject: '$(System.TeamProject)'
+    azureDevOpsTestPlan: 'Test Plan'
+    azureDevOpsTestRun: 'Load Test'
+    loadTestScript: 'loadtest.js'
+    loadTestScriptArguments: '-n 1000 -c 100'
+    loadTestConfiguration: 'loadtest.config.json'
+    loadTestArtifacts: '$(System.ArtifactsDirectory)'
+    loadTestArtifactsFormat: 'Zip'
+    loadTestArtifactsName: 'Load Test Artifacts'
+    loadTestArtifactsPublishLocation: '$(System.ArtifactsDirectory)'
+    loadTestArtifactsPublishMethod: 'Publish'
+    loadTestArtifactsPublishPattern: '**/*.zip'
+    loadTestArtifactsPublishPath: 'Load Test Artifacts'
+    loadTestArtifactsPublishArtifactName: 'Load Test Artifacts'
+    loadTestArtifactsPublishArtifactVersion: '1.0.0'
+    loadTestArtifactsPublishArtifactDescription: 'Load Test Artifacts'
+    loadTestArtifactsPublishArtifactTags: 'Load Test, Performance'
+    loadTestArtifactsPublishArtifactSource: 'Local'
+    loadTestArtifactsPublishArtifactRepository: '$(System.DefaultWorkingDirectory)'
+    loadTestArtifactsPublishArtifactRepositoryType: 'LocalGit'
+    loadTestArtifactsPublishArtifactRepositoryBranch: 'master'
+    loadTestArtifactsPublishArtifactRepositoryCommitMessage: 'Publish Load Test Artifacts'
+    loadTestArtifactsPublishArtifactRepositoryPath: 'Load Test Artifacts'
+    loadTestArtifactsPublishArtifactRepositoryUsername: '$(System.DefaultCredential.Username)'
+    loadTestArtifactsPublishArtifactRepositoryPassword: '$(System.DefaultCredential.Password)'
+    loadTestArtifactsPublishArtifactRepositoryUrl: '$(System.TeamFoundationServerUri)'
+
+  condition: succeededOrFailed()
+  continueOnError: true
+  dependsOn: []
+  displayName: 'Start Load Test'
+  enabled: true
+  id: 1
+  inputs:
+    azureSubscription: 'Azure DevOps Service Connection'
+    azureDevOpsProject: '$(System.TeamProject)'
+    azureDevOpsTestPlan: 'Test Plan'
+    azureDevOpsTestRun: 'Load Test'
+    loadTestScript: 'loadtest.js'
+    loadTestScriptArguments: '-n 1000 -c 100'
+    loadTestConfiguration: 'loadtest.config.json'
+    loadTestArtifacts: '$(System.ArtifactsDirectory)'
+    loadTestArtifactsFormat: 'Zip'
+    loadTestArtifactsName: 'Load Test Artifacts'
+    loadTestArtifactsPublishLocation: '$(System.ArtifactsDirectory)'
+    loadTestArtifactsPublishMethod: 'Publish'
+    loadTestArtifactsPublishPattern: '**/*.zip'
+    loadTestArtifactsPublishPath: 'Load Test Artifacts'
+    loadTestArtifactsPublishArtifactName: 'Load Test Artifacts'
+    loadTestArtifactsPublishArtifactVersion: '1.0.0'
+    loadTestArtifactsPublishArtifactDescription: 'Load Test Artifacts'
+    loadTestArtifactsPublishArtifactTags: 'Load Test, Performance'
+    loadTestArtifactsPublishArtifactSource: 'Local'
+    loadTestArtifactsPublishArtifactRepository: '$(System.DefaultWorkingDirectory)'
+    loadTestArtifactsPublishArtifactRepositoryType: 'LocalGit'
+    loadTestArtifactsPublishArtifactRepositoryBranch: 'master'
+    loadTestArtifactsPublishArtifactRepositoryCommitMessage: 'Publish Load Test Artifacts'
+    loadTestArtifactsPublishArtifactRepositoryPath: 'Load Test Artifacts'
+    loadTestArtifactsPublishArtifactRepositoryUsername: '$(System.DefaultCredential.Username)'
+    loadTestArtifactsPublishArtifactRepositoryPassword: '$(System.DefaultCredential.Password)'
+    loadTestArtifactsPublishArtifactUrl: '$(System.TeamFoundationServerUri)'
+    loadTestArtifactsPublishArtifactPath: 'Load Test Artifacts'
+    loadTestArtifactsPublishArtifactVersionControlPath: '$(System.DefaultWorkingDirectory)'
+    loadTestArtifactsPublishArtifactVersionControlCommitMessage: 'Publish Load Test Artifacts'
+    loadTestArtifactsPublishArtifactVersionControlUsername: '$(System.DefaultCredential.Username)'
+    loadTestArtifactsPublishArtifactVersionControlPassword: '$(System.DefaultCredential.Password)'
+    loadTestArtifactsPublishArtifactVersionControlRepositoryType: 'LocalGit'
+    loadTestArtifactsPublishArtifactVersionControlRepositoryUrl: '$(System.TeamFoundationServerUri)'
+
+  condition: succeededOrFailed()
+  continueOnError: true
+  dependsOn: []
+  displayName: 'Publish Load Test Artifacts'
+  enabled: true
+  id: 2
+  inputs: {}
+  name: PublishArtifacts
+  type: PublishBuildArtifacts@1
+  workspace:
+    clean: false
+    cleanTargetFolder: '$(Build.ArtifactStagingDirectory)'
+    cleanWorkingDirectory: false
+    cleanPath: '$(Build.SourcesDirectory)'
+    cleanExcludePatterns: []
+    cleanIncludePatterns: []
+    cleanAdditionalFolders: []
+    cleanExcludeFiles: []
+    cleanIncludeFiles: []
+    cleanPathExcludePatterns: []
+    cleanIncludePattern: ''
+    cleanWorkingDirectoryExcludePatterns: []
+    cleanWorkingDirectoryIncludePattern: ''
+    cleanPathIncludePatterns: []
+    cleanWorkingDirectoryIncludePattern: ''
+    cleanArtifacts: false
+    cleanArtifactsPath: '$(Build.ArtifactStagingDirectory)'
+    cleanArtifactsName: 'drop'
+    cleanArtifactsVersion: 'latest'
+    cleanArtifactsPublishLocation: 'none'
+    cleanArtifactsPublishMethod: 'none'
+    cleanArtifactsPublishPattern: ''
+    cleanArtifactsPublishPath: ''
+    cleanArtifactsPublishArtifactName: ''
+    cleanArtifactsPublishArtifactVersion: ''
+    cleanArtifactsPublishArtifactDescription: ''
+    cleanArtifactsPublishArtifactTags: ''
+    cleanArtifactsPublishArtifactSource: ''
+    cleanArtifactsPublishArtifactRepository: ''
+    cleanArtifactsPublishArtifactRepositoryType: ''
+    cleanArtifactsPublishArtifactRepositoryBranch: ''
+    cleanArtifactsPublishArtifactRepositoryCommitMessage: ''
+    cleanArtifactsPublishArtifactRepositoryPath: ''
+    cleanArtifactsPublishArtifactRepositoryUsername: ''
+    cleanArtifactsPublishArtifactPassword: ''
+    cleanArtifactsPublishArtifactUrl: ''
+    cleanArtifactsPublishArtifactPath: ''
+    cleanArtifactsPublishArtifactVersionControlPath: ''
+    cleanArtifactsPublishArtifactVersionControlCommitMessage: ''
+    cleanArtifactsPublishArtifactVersionControlUsername: ''
+    cleanArtifactsPublishArtifactVersionControlPassword: ''
+    cleanArtifactsPublishArtifactVersionControlRepositoryType: ''
+    cleanArtifactsPublishArtifactVersionControlRepositoryUrl: ''
+    cleanArtifactsPublishArtifactVersionControlPath: ''
+    cleanArtifactsPublishArtifactVersionControlCommitMessage: ''
+    cleanArtifactsPublishArtifactVersionControlUsername: ''
+    cleanArtifactsPublishArtifactVersionControlPassword: ''
+    cleanArtifactsPublishArtifactVersionControlRepositoryType: ''
+    cleanArtifactsPublishArtifactVersionControlRepositoryUrl: ''
+    cleanArtifactsPublishArtifactVersionControlPath: ''
+    cleanArtifactsPublishArtifactVersionControlCommitMessage: ''
+    cleanArtifactsPublishArtifactVersionControlUsername: ''
+    cleanArtifactsPublishArtifactVersionControlPassword: ''
+    cleanArtifactsPublishArtifactVersionControlRepositoryType: ''
+    cleanArtifactsPublishArtifactVersionControlRepositoryUrl: ''
+    cleanArtifactsPublishArtifactVersionControlPath: ''
+    cleanArtifactsPublishArtifactVersionControlCommitMessage: ''
+    cleanArtifactsPublishArtifactVersionControlUsername: ''
+    cleanArtifactsPublishArtifactVersionControlPassword: ''
+    cleanArtifactsPublishArtifactVersionControlRepositoryType: ''
+    cleanArtifactsPublishArtifactVersionControlRepositoryUrl: ''
+    cleanArtifactsPublishArtifactVersionControlPath: ''
+    cleanArtifactsPublishArtifactVersionControlCommitMessage: ''
+    cleanArtifactsPublishArtifactVersionControlUsername: ''
+    cleanArtifactsPublishArtifactVersionControlPassword: ''
+    cleanArtifactsPublishArtifactVersionControlRepositoryType: ''
+    cleanArtifactsPublishArtifactVersionControlRepositoryUrl: ''
+    cleanArtifactsPublishArtifactVersionControlPath: ''
+    cleanArtifactsPublishArtifactVersionControlCommitMessage: ''
+    cleanArtifactsPublishArtifactVersionControlUsername: ''
+    cleanArtifactsPublishArtifactVersionControlPassword: ''
+    cleanArtifactsPublishArtifactVersionControlRepositoryType: ''
+    cleanArtifactsPublishArtifactVersionControlRepositoryUrl: ''
+    cleanArtifactsPublishArtifactVersionControlPath: ''
+    cleanArtifactsPublishArtifactVersionControlCommitMessage: ''
+    cleanArtifactsPublishArtifactVersionControlUsername: ''
+
+  condition: succeededOrFailed()
+  continueOnError: true
+  dependsOn: []
+  displayName: 'Publish Load Test Results'
+  enabled: true
+  id: 3
+  inputs:
+  - artifactName: 'drop'
+    artifactType: 'Container'
+    targetPath: '$(System.DefaultWorkingDirectory)/Load Test Results'
+    flatten: true
+    includeFiles: '*'
+    excludeFiles: ''
+    includeDirectories: '*'
+    excludeDirectories: ''
+    retentionPolicy: 'Keep forever'
+    deleteOnCompletion: false
+    publishLocation: 'Container Registry'
+    containerRegistry: 'Azure Container Registry'
+    containerRegistryUsername: $(acrUsername)
+    containerRegistryPassword: $(acrPassword)
+    containerRegistryResourceGroup: $(acrResourceGroup)
+    containerRegistryRepository: $(acrRepository)
+    containerRegistryTag: $(Build.BuildId)
+    containerRegistryForcePush: false
+    containerRegistryEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+    containerRegistryImageEnableContentTrust: false
+    containerRegistryManifestDigest: ''
+    containerRegistryManifestFile: ''
+    containerRegistrySasToken: ''
+    containerRegistryUseBuildCredentials: false
+    containerRegistryLoginServer: ''
+    containerRegistryImageName: ''
+    containerRegistryImageTag: ''
+    containerRegistryImageDigest: ''
+    containerRegistryImageForcePush: false
+
+  strategy:
+    matrix:
+      loadTest:
+        - loadTest1
+        - loadTest2
+        - loadTest3
+
+  steps:
+  - checkout: self
+    clean: true
+    displayName: 'Checkout Repository'
+    fetchDepth: 0
+    ref: $(Build.SourceBranch)
+    submodules: false
+    tags: none
+    trigger: none
+    unshallow: false
+    workingDirectory: $(Build.SourcesDirectory)
+    persistCredentials: false
+    allowLinks: false
+    checkoutSubmodules: false
+    repositoryUrl: $(System.TeamFoundationCollectionUri)/_git/$(Build.Repository.Name)
+    lfs: false
+    lfsIgnore: false
+    lfsNoFetch: false
+    lfsPath: ''
+    lfsStrict: false
+    lfsTreatErrorsAsWarnings: false
+    lfsUseBasicAuth: false
+    lfsUsername: ''
+    lfsPassword: ''
+    lfsProxy: ''
+    lfsTimeout: 30
+    lfsUseGitCreds: false
+    lfsUseOAuth: false
+    lfsUsePersonalAccessToken: false
+    lfsPersonalAccessToken: ''
+    lfsCustomHeaders: ''
+    lfsProxyUrl: ''
+    lfsProxyUsername: ''
+    lfsProxyPassword: ''
+    lfsProxy bypassHosts: ''
+    lfsProxyBypassCredentials: false
+    lfsProxyBypassList: ''
+    lfsProxyBypassLocalAddresses: false
+    lfsProxyBypassLocalSubnets: ''
+    lfsProxyBypassHosts: ''
+    lfsProxyBypassCredentials: false
+    lfsProxyBypassList: ''
+    lfsProxyBypassLocalAddresses: false
+    lfsProxyBypassLocalSubnets: ''
+    lfsProxyBypassHosts: ''
+    lfsProxyBypassCredentials: false
+    lfsProxyBypassList: ''
+    lfsProxyBypassLocalAddresses: false
+    lfsProxyBypassLocalSubnets: ''
+    lfsProxyBypassHosts: ''
+    lfsProxyBypassCredentials: false
+    lfsProxyBypassList: ''
+    lfsProxyBypassLocalAddresses: false
+    lfsProxyBypassLocalSubnets: ''
+    lfsProxyBypassHosts: ''
+    lfsProxyBypassCredentials: false
+    lfsProxyBypassList: ''
+    lfsProxyBypassLocalAddresses: false
+    lfsProxyBypassLocalSubnets: ''
+    lfsProxyBypassHosts: ''
+    lfsProxyBypassCredentials: false
+    lfsProxyBypassList: ''
+    lfsProxyBypassLocalAddresses: false
+    lfsProxyBypassLocalSubnets: ''
+    lfsProxyBypassHosts: ''
+    lfsProxyBypassCredentials: false
+    lfsProxyBypassList: ''
+    lfsProxyBypassLocalAddresses: false
+    lfsProxyBypassLocalSubnets: ''
+    lfsProxyBypassHosts: ''
+    lfsProxyBypassCredentials: false
+    lfsProxyBypassList: ''
+    lfsProxyBypassLocalAddresses: false
+    lfsProxyBypassLocalSubnets: ''
+    lfsProxyBypassHosts: ''
+    lfsProxyBypassCredentials: false
+    lfsProxyBypassList: ''
+    lfsProxyBypassLocalAddresses: false
+    lfsProxyBypassLocalSubnets: ''
+    lfsProxyBypassHosts: ''
+    lfsProxyBypassCredentials: false
+    lfsProxyBypassList: ''
+    lfsProxyBypassLocalAddresses: false
+    lfsProxyBypassLocalSubnets: ''
+    lfsProxyBypassHosts: ''
+    lfsProxyBypassCredentials: false
+    lfsProxyBypassList: ''
+    lfsProxyBypassLocalAddresses: false
+    lfsProxyBypassLocalSubnets: ''
+    lfsProxyBypassHosts: ''
+    lfsProxyBypassCredentials: false
+    lfsProxyBypassList: ''
+    lfsProxyBypassLocalAddresses: false
+    lfsProxyBypassLocalSubnets: ''
+    lfsProxyBypassHosts: ''
+    lfsProxyBypassCredentials: false
+    lfsProxyBypassList: ''
+    lfsProxyBypassLocalAddresses: false
+    lfsProxyBypassLocalSubnets: ''
+
+  - task: Docker@2
+    displayName: 'Pull Docker Image'
+    inputs:
+      containerRegistry: $(ContainerRegistryName)
+      command: pull
+      image: $(ContainerRegistryImageName):$(ContainerRegistryImageTag)
+      tags: |
+        $(ContainerRegistryImageName):$(ContainerRegistryImageTag)
+        $(ContainerRegistryImageName):latest
+        $(ContainerRegistryImageName):$(Build.BuildId)
+        $(ContainerRegistryImageName):$(Build.BuildId)-$(Build.SourceBranchName)
+        $(ContainerRegistryImageName):$(Build.BuildId)-$(Build.SourceBranchName)-$(Build.SourceVersion)
+        $(ContainerRegistryImageName):$(Build.BuildId)-$(Build.SourceBranchName)-$(Build.SourceVersion)-$(Build.BuildNumber)
+        $(ContainerRegistryImageName):$(Build.BuildId)-$(Build.SourceBranchName)-$(Build.SourceVersion)-$(Build.BuildNumber)-$(Build.SourceBranchCommit)
+        $(ContainerRegistryImageName):$(Build.BuildId)-$(Build.SourceBranchName)-$(Build.SourceVersion)-$(Build.BuildNumber)-$(Build.SourceBranchCommit)-$(
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+        containerRegistryUseBuildCredentials: false
+        containerRegistryLoginServer: ''
+        containerRegistryImageName: ''
+        containerRegistryImageTag: ''
+        containerRegistryImageDigest: ''
+        containerRegistryImageForcePush: false
+        containerRegistryImageEnableContentTrust: false
+        containerRegistryManifestDigest: ''
+        containerRegistryManifestFile: ''
+        containerRegistrySasToken: ''
+
+    # Docker Compose configuration
+    dockerCompose:
+        # Docker Compose file path
+        dockerComposeFilePath: './docker-compose.yml'
+        # Docker Compose project name
+        dockerComposeProjectName: 'my-project'
+        # Docker Compose service names to be deployed
+        dockerComposeServices: ['web', 'db']
+        # Docker Compose environment variables
+        dockerComposeEnvironment:
+            - VAR1=value1
+            - VAR2=value2
+            - VAR3=value3
+            # Docker Compose secrets
+            - SECRET_VAR1=secret_value1
+            - SECRET_VAR2=secret_value2
+            - SECRET_VAR3=secret_value3
+            # Docker Compose volumes
+            - VOLUME_VAR1:/var/www/html/volume1
+            - VOLUME_VAR2:/var/www/html/volume2
+            - VOLUME_VAR3:/var/www/html/volume3
+            # Docker Compose networks
+            - NETWORK_VAR1:my-network
+            - NETWORK_VAR2:my-network
+            - NETWORK_VAR3:my-network
+            # Docker Compose build arguments
+            - BUILD_ARG_VAR1=build_arg_value1
+            - BUILD_ARG_VAR2=build_arg_value2
+            - BUILD_ARG_VAR3=build_arg_value3
+            # Docker Compose deploy configurations
+            - DEPLOY_VAR1: replicas=3
+            - DEPLOY_VAR2: replicas=5
+            - DEPLOY_VAR3: replicas=7
+            # Docker Compose resource limits
+            - RESOURCES_VAR1: cpus=0.5,memory=256M
+            - RESOURCES_VAR2: cpus=1.0,memory=512M
+            - RESOURCES_VAR3: cpus=1.5,memory=768M
+            # Docker Compose resource reservations
+            - RESERVATIONS_VAR1: cpus=0.25,memory=128M
+            - RESERVATIONS_VAR2: cpus=0.50,memory=256M
+            - RESERVATIONS_VAR3: cpus=0.75,memory=384M
+            # Docker Compose healthcheck configurations
+            - HEALTHCHECK_VAR1: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - HEALTHCHECK_VAR2: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - HEALTHCHECK_VAR3: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            # Docker Compose restart policies
+            - RESTART_POLICY_VAR1: condition=on-failure
+            - RESTART_POLICY_VAR2: condition=on-failure
+            - RESTART_POLICY_VAR3: condition=on-failure
+            # Docker Compose readiness and liveness probes
+            - READINESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - READINESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - READINESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            - LIVENESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - LIVENESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - LIVENESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            # Docker Compose labels
+            - LABEL_VAR1=key1=value1
+            - LABEL_VAR2=key2=value2
+            - LABEL_VAR3=key3=value3
+            # Docker Compose networks configuration
+            - NETWORK_CONFIG_VAR1: subnet=192.168.1.0/24,gateway=192.168.1.1
+            - NETWORK_CONFIG_VAR2: subnet=192.168.2.0/24,gateway=192.168.2.1
+            - NETWORK_CONFIG_VAR3: subnet=192.168.3.0/24,gateway=192.168.3.1
+            # Docker Compose container resources
+            - CONTAINER_RESOURCES_VAR1: cpus=0.5,memory=256M
+            - CONTAINER_RESOURCES_VAR2: cpus=1.0,memory=512M
+            - CONTAINER_RESOURCES_VAR3: cpus=1.5,memory=768M
+            # Docker Compose container resource reservations
+            - CONTAINER_RESERVATIONS_VAR1: cpus=0.25,memory=128M
+            - CONTAINER_RESERVATIONS_VAR2: cpus=0.50,memory=256M
+            - CONTAINER_RESERVATIONS_VAR3: cpus=0.75,memory=384M
+            # Docker Compose container healthcheck configurations
+            - CONTAINER_HEALTHCHECK_VAR1: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR2: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR3: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            # Docker Compose container restart policies
+            - CONTAINER_RESTART_POLICY_VAR1: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR2: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR3: condition=on-failure
+            # Docker Compose container readiness and liveness probes
+            - CONTAINER_READINESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            # Docker Compose container labels
+            - CONTAINER_LABEL_VAR1=key1=value1
+            - CONTAINER_LABEL_VAR2=key2=value2
+            - CONTAINER_LABEL_VAR3=key3=value3
+            # Docker Compose container networks configuration
+            - CONTAINER_NETWORK_CONFIG_VAR1: subnet=192.168.1.0/24,gateway=192.168.1.1
+            - CONTAINER_NETWORK_CONFIG_VAR2: subnet=192.168.2.0/24,gateway=192.168.
+            - CONTAINER_NETWORK_CONFIG_VAR3: subnet=192.168.3.0/24,gateway=192.168.
+            # Docker Compose container resources
+            - CONTAINER_RESOURCES_VAR1: cpus=0.5,memory=256M
+            - CONTAINER_RESOURCES_VAR2: cpus=1.0,memory=512M
+            - CONTAINER_RESOURCES_VAR3: cpus=1.5,memory=768M
+            # Docker Compose container resource reservations
+            - CONTAINER_RESERVATIONS_VAR1: cpus=0.25,memory=128M
+            - CONTAINER_RESERVATIONS_VAR2: cpus=0.50,memory=256M
+            - CONTAINER_RESERVATIONS_VAR3: cpus=0.75,memory=384M
+            # Docker Compose container healthcheck configurations
+            - CONTAINER_HEALTHCHECK_VAR1: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR2: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR3: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            # Docker Compose container restart policies
+            - CONTAINER_RESTART_POLICY_VAR1: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR2: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR3: condition=on-failure
+            # Docker Compose container readiness and liveness probes
+            - CONTAINER_READINESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            # Docker Compose container labels
+            - CONTAINER_LABEL_VAR1=key1=value1
+            - CONTAINER_LABEL_VAR2=key2=value2
+            - CONTAINER_LABEL_VAR3=key3=value3
+            # Docker Compose container networks configuration
+            - CONTAINER_NETWORK_CONFIG_VAR1: subnet=192.168.1.0/24,gateway=192.168.1.1
+            - CONTAINER_NETWORK_CONFIG_VAR2: subnet=192.168.2.0/24,gateway=192.168.
+            - CONTAINER_NETWORK_CONFIG_VAR3: subnet=192.168.3.0/24,gateway=192.168.
+            # Docker Compose container resources
+            - CONTAINER_RESOURCES_VAR1: cpus=0.5,memory=256M
+            - CONTAINER_RESOURCES_VAR2: cpus=1.0,memory=512M
+            - CONTAINER_RESOURCES_VAR3: cpus=1.5,memory=768M
+            # Docker Compose container resource reservations
+            - CONTAINER_RESERVATIONS_VAR1: cpus=0.25,memory=128M
+            - CONTAINER_RESERVATIONS_VAR2: cpus=0.50,memory=256M
+            - CONTAINER_RESERVATIONS_VAR3: cpus=0.75,memory=384M
+            # Docker Compose container healthcheck configurations
+            - CONTAINER_HEALTHCHECK_VAR1: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR2: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR3: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            # Docker Compose container restart policies
+            - CONTAINER_RESTART_POLICY_VAR1: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR2: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR3: condition=on-failure
+            # Docker Compose container readiness and liveness probes
+            - CONTAINER_READINESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            # Docker Compose container labels
+            - CONTAINER_LABEL_VAR1=key1=value1
+            - CONTAINER_LABEL_VAR2=key2=value2
+            - CONTAINER_LABEL_VAR3=key3=value3
+            # Docker Compose container networks configuration
+            - CONTAINER_NETWORK_CONFIG_VAR1: subnet=192.168.1.0/24,gateway=192.168.1.1
+            - CONTAINER_NETWORK_CONFIG_VAR2: subnet=192.168.2.0/24,gateway=192.168.
+            - CONTAINER_NETWORK_CONFIG_VAR3: subnet=192.168.3.0/24,gateway=192.168.
+            # Docker Compose container resources
+            - CONTAINER_RESOURCES_VAR1: cpus=0.5,memory=256M
+            - CONTAINER_RESOURCES_VAR2: cpus=1.0,memory=512M
+            - CONTAINER_RESOURCES_VAR3: cpus=1.5,memory=768M
+            # Docker Compose container resource reservations
+            - CONTAINER_RESERVATIONS_VAR1: cpus=0.25,memory=128M
+            - CONTAINER_RESERVATIONS_VAR2: cpus=0.50,memory=256M
+            - CONTAINER_RESERVATIONS_VAR3: cpus=0.75,memory=384M
+            # Docker Compose container healthcheck configurations
+            - CONTAINER_HEALTHCHECK_VAR1: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR2: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR3: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            # Docker Compose container restart policies
+            - CONTAINER_RESTART_POLICY_VAR1: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR2: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR3: condition=on-failure
+            # Docker Compose container readiness and liveness probes
+            - CONTAINER_READINESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            # Docker Compose container labels
+            - CONTAINER_LABEL_VAR1=key1=value1
+            - CONTAINER_LABEL_VAR2=key2=value2
+            - CONTAINER_LABEL_VAR3=key3=value3
+            # Docker Compose container networks configuration
+            - CONTAINER_NETWORK_CONFIG_VAR1: subnet=192.168.1.0/24,gateway=192.168.1.1
+            - CONTAINER_NETWORK_CONFIG_VAR2: subnet=192.168.2.0/24,gateway=192.168.
+            - CONTAINER_NETWORK_CONFIG_VAR3: subnet=192.168.3.0/24,gateway=192.168.
+            # Docker Compose container resources
+            - CONTAINER_RESOURCES_VAR1: cpus=0.5,memory=256M
+            - CONTAINER_RESOURCES_VAR2: cpus=1.0,memory=512M
+            - CONTAINER_RESOURCES_VAR3: cpus=1.5,memory=768M
+            # Docker Compose container resource reservations
+            - CONTAINER_RESERVATIONS_VAR1: cpus=0.25,memory=128M
+            - CONTAINER_RESERVATIONS_VAR2: cpus=0.50,memory=256M
+            - CONTAINER_RESERVATIONS_VAR3: cpus=0.75,memory=384M
+            # Docker Compose container healthcheck configurations
+            - CONTAINER_HEALTHCHECK_VAR1: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR2: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR3: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            # Docker Compose container restart policies
+            - CONTAINER_RESTART_POLICY_VAR1: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR2: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR3: condition=on-failure
+            # Docker Compose container readiness and liveness probes
+            - CONTAINER_READINESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            # Docker Compose container labels
+            - CONTAINER_LABEL_VAR1=key1=value1
+            - CONTAINER_LABEL_VAR2=key2=value2
+            - CONTAINER_LABEL_VAR3=key3=value3
+            # Docker Compose container networks configuration
+            - CONTAINER_NETWORK_CONFIG_VAR1: subnet=192.168.1.0/24,gateway=192.168.1.1
+            - CONTAINER_NETWORK_CONFIG_VAR2: subnet=192.168.2.0/24,gateway=192.168.
+            - CONTAINER_NETWORK_CONFIG_VAR3: subnet=192.168.3.0/24,gateway=192.168.
+            # Docker Compose container resources
+            - CONTAINER_RESOURCES_VAR1: cpus=0.5,memory=256M
+            - CONTAINER_RESOURCES_VAR2: cpus=1.0,memory=512M
+            - CONTAINER_RESOURCES_VAR3: cpus=1.5,memory=768M
+            # Docker Compose container resource reservations
+            - CONTAINER_RESERVATIONS_VAR1: cpus=0.25,memory=128M
+            - CONTAINER_RESERVATIONS_VAR2: cpus=0.50,memory=256M
+            - CONTAINER_RESERVATIONS_VAR3: cpus=0.75,memory=384M
+            # Docker Compose container healthcheck configurations
+            - CONTAINER_HEALTHCHECK_VAR1: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR2: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR3: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            # Docker Compose container restart policies
+            - CONTAINER_RESTART_POLICY_VAR1: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR2: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR3: condition=on-failure
+            # Docker Compose container readiness and liveness probes
+            - CONTAINER_READINESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            # Docker Compose container labels
+            - CONTAINER_LABEL_VAR1=key1=value1
+            - CONTAINER_LABEL_VAR2=key2=value2
+            - CONTAINER_LABEL_VAR3=key3=value3
+            # Docker Compose container networks configuration
+            - CONTAINER_NETWORK_CONFIG_VAR1: subnet=192.168.1.0/24,gateway=192.168.1.1
+            - CONTAINER_NETWORK_CONFIG_VAR2: subnet=192.168.2.0/24,gateway=192.168.
+            - CONTAINER_NETWORK_CONFIG_VAR3: subnet=192.168.3.0/24,gateway=192.168.
+            # Docker Compose container resources
+            - CONTAINER_RESOURCES_VAR1: cpus=0.5,memory=256M
+            - CONTAINER_RESOURCES_VAR2: cpus=1.0,memory=512M
+            - CONTAINER_RESOURCES_VAR3: cpus=1.5,memory=768M
+            # Docker Compose container resource reservations
+            - CONTAINER_RESERVATIONS_VAR1: cpus=0.25,memory=128M
+            - CONTAINER_RESERVATIONS_VAR2: cpus=0.50,memory=256M
+            - CONTAINER_RESERVATIONS_VAR3: cpus=0.75,memory=384M
+            # Docker Compose container healthcheck configurations
+            - CONTAINER_HEALTHCHECK_VAR1: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR2: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR3: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            # Docker Compose container restart policies
+            - CONTAINER_RESTART_POLICY_VAR1: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR2: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR3: condition=on-failure
+            # Docker Compose container readiness and liveness probes
+            - CONTAINER_READINESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            # Docker Compose container labels
+            - CONTAINER_LABEL_VAR1=key1=value1
+            - CONTAINER_LABEL_VAR2=key2=value2
+            - CONTAINER_LABEL_VAR3=key3=value3
+            # Docker Compose container networks configuration
+            - CONTAINER_NETWORK_CONFIG_VAR1: subnet=192.168.1.0/24,gateway=192.168.1.1
+            - CONTAINER_NETWORK_CONFIG_VAR2: subnet=192.168.2.0/24,gateway=192.168.
+            - CONTAINER_NETWORK_CONFIG_VAR3: subnet=192.168.3.0/24,gateway=192.168.
+            # Docker Compose container resources
+            - CONTAINER_RESOURCES_VAR1: cpus=0.5,memory=256M
+            - CONTAINER_RESOURCES_VAR2: cpus=1.0,memory=512M
+            - CONTAINER_RESOURCES_VAR3: cpus=1.5,memory=768M
+            # Docker Compose container resource reservations
+            - CONTAINER_RESERVATIONS_VAR1: cpus=0.25,memory=128M
+            - CONTAINER_RESERVATIONS_VAR2: cpus=0.50,memory=256M
+            - CONTAINER_RESERVATIONS_VAR3: cpus=0.75,memory=384M
+            # Docker Compose container healthcheck configurations
+            - CONTAINER_HEALTHCHECK_VAR1: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR2: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            - CONTAINER_HEALTHCHECK_VAR3: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+            # Docker Compose container restart policies
+            - CONTAINER_RESTART_POLICY_VAR1: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR2: condition=on-failure
+            - CONTAINER_RESTART_POLICY_VAR3: condition=on-failure
+            # Docker Compose container readiness and liveness probes
+            - CONTAINER_READINESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_READINESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR1: http-get=http://localhost:8080/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR2: http-get=http://localhost:8081/healthcheck
+            - CONTAINER_LIVENESS_PROBE_VAR3: http-get=http://localhost:8082/healthcheck
+            # Docker Compose container labels
+            - CONTAINER_LABEL_VAR1=key1=value1
+            - CONTAINER_LABEL_VAR2=key2=value2
+            - CONTAINER_LABEL_VAR3=key3=value3
+            # Docker Compose container networks configuration
+            - CONTAINER_NETWORK_CONFIG_VAR1: subnet=192.168.1.0/24,gateway=192.168.1.1
+            - CONTAINER_NETWORK_CONFIG_VAR2: subnet=192.168.2.0/24,gateway=192.168.
+            - CONTAINER_NETWORK_CONFIG_VAR3: subnet=192.168.3.0/24,gateway=192.168.
+            # Docker Compose container resources
+            - CONTAINER_RESOURCES_VAR1: cpus=0.5,memory=256M
+            - CONTAINER_RESOURCES_VAR2: cpus=1.0,memory=512M
+            - CONTAINER_RESOURCES_VAR3: cpus=1.5,memory=768M
+            # Docker Compose container resource reservations
+            - CONTAINER_RESERVATIONS_VAR1: cpus=0.25,memory=128M
+            - CONTAINER_RESERVATIONS_VAR2: cpus=0.50,memory=256M
+            - CONTAINER_RESERVATIONS_VAR3: cpus=0.75,memory=384M
+            # Docker Compose container healthcheck configurations
+            - CONTAINER_HEALTHCHECK_VAR1: test=CMD-SHELL [ -e /tmp/healthy ] || exit 1
+
+            # Additional environment variables
+            - ENV_VAR1=value1
+            - ENV_VAR2=value2
+            - ENV_VAR3=value3
+
+            # Docker Compose container volumes
+            - VOLUME_VAR1: /path/to/volume1
+            - VOLUME_VAR2: /path/to/volume2
+            - VOLUME_VAR3: /path/to/volume3
+
+            # Docker Compose container volumes from Docker image
+            - VOLUME_FROM_IMAGE_VAR1: image1:tag1
+            - VOLUME_FROM_IMAGE_VAR2: image2:tag2
+            - VOLUME_FROM_IMAGE_VAR3: image3:tag3

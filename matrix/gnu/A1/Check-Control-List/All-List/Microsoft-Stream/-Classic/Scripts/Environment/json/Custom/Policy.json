@@ -1,0 +1,210 @@
+
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "age": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "address": {
+            "type": "object",
+            "properties": {
+                "street": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "zip": {
+                    "type": "string",
+                    "pattern": "^\\d{5}(?:[-\\s]\\d{4})?$"
+                }
+            },
+            "required": [
+                "street",
+                "city",
+                "state",
+                "zip"
+            ]
+        },
+        "hobbies": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "name",
+        "age",
+        "address",
+        "hobbies"
+    ],
+    "additionalProperties": false,
+    "patternProperties": {
+        "phone": {
+            "type": "string",
+            "pattern": "^\\d{10}$"
+        }
+    },
+    "maxProperties": 5,
+    "minProperties": 5,
+    "uniqueItems": true,
+    "minItems": 3,
+    "maxItems": 5,
+    "contains": {
+        "type": "string",
+        "enum": ["reading", "painting", "cooking"]
+    },
+    "dependencies": {
+        "address.city": ["address.state", "address.zip"]
+    },
+    "anyOf": [
+        {
+            "properties": {
+                "address.state": {
+                    "type": "string",
+                    "enum": ["California", "New York", "Texas"]
+                }
+            },
+            "required": ["address.state"]
+        },
+    
+        {
+            "properties": {
+                "address.zip": {
+                    "type": "string",
+                    "pattern": "^\\d{5}(?:[-\\s]\\d{4})?$"
+                }
+            },
+            "required": ["address.zip"]
+        }
+    ],
+    "not": {
+        "properties": {
+            "address.state": {
+                "type": "string",
+                "enum": ["California", "New York", "Texas"]
+            }
+        },
+        "required": ["address.state"]
+    },
+    "enum": [
+        {
+            "name": "John Doe",
+            "age": 30,
+            "address": {
+                "street": "123 Main St",
+                "city": "New York",
+                "state": "New York",
+                "zip": "10001"
+            },
+            "hobbies": ["reading", "painting"],
+            "phone": "1234567890"
+        },
+    
+        {
+            "name": "Jane Smith",
+            "age": 25,
+            "address": {
+                "street": "456 Elm St",
+                "city": "Los Angeles",
+                "state": "California",
+                "zip": "90001"
+            },
+            "hobbies": ["cooking"],
+            "phone": "9876543210"
+        }
+    ],
+    "allOf": [
+        {
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "pattern": "^[A-Z][a-zA-Z]+$"
+                }
+            },
+            "required": ["name"]
+        },
+    
+        {
+            "properties": {
+                "age": {
+                    "type": "integer",
+                    "minimum": 18
+                }
+            },
+            "required": ["age"]
+        }
+    ],
+    "oneOf": [
+        {
+            "properties": {
+                "address.state": {
+                    "type": "string",
+                    "enum": ["California", "New York", "Texas"]
+                }
+            },
+            "required": ["address.state"]
+        },
+    
+        {
+            "properties": {
+                "address.zip": {
+                    "type": "string",
+                    "pattern": "^\\d{5}(?:[-\\s]\\d{4})?$"
+                }
+            },
+            "required": ["address.zip"]
+        }
+    ],
+    "if": {
+        "properties": {
+            "address.city": {
+                "type": "string"
+            }
+        },
+        "required": ["address.city"]
+    },
+    "then": {
+        "properties": {
+            "address.state": {
+                "type": "string",
+                "enum": ["California", "New York", "Texas"]
+            }
+        },
+        "required": ["address.state"]
+    },
+    "else": {
+        "properties": {
+            "address.zip": {
+                "type": "string",
+                "pattern": "^\\d{5}(?:[-\\s]\\d{4})?$"
+            }
+        },
+        "required": ["address.zip"]
+    },
+    "definitions": {
+        "person": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "age": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            },
+            "required": ["name", "age"]
+        }
+    }
+   
+}

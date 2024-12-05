@@ -1,0 +1,38 @@
+{
+    "$schema": "https://typedoc.org/schema.json",
+    "name": "My TypeScript Project",
+    "version": "0.1.0",
+    "description": "A TypeScript project with custom TypeScript configuration.",
+    "readme": "README.md",
+    "license": "MIT",
+    "includes": ["src/**/*"],
+    "exclude": ["node_modules", "dist"],
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "commonjs",
+        "strict": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "outDir": "dist"
+    },
+    "typedocOptions": {
+        "out": "./docs",
+        "includes": ["src/**/*"],
+        "exclude": ["node_modules"],
+        "theme": "minimal",
+        "readme": "none",
+        "tsconfig": "./tsconfig.json"
+    
+    },
+    "scripts": {
+        "build": "tsc",
+        "docs": "typedoc"
+    },
+    "devDependencies": {
+        "@types/node": "^14.14.32",
+        "typescript": "^4.2.3",
+        "typedoc": "^0.21.2"
+    },
+    "dependencies": {}
+}

@@ -1,0 +1,118 @@
+Project: devbox
+name: box
+title: "The devbox Connects" (Project Title)
+description: "A modern, open-source development environment."
+version: "1.0.0"
+license: "MIT"
+
+authors:
+  - name: "Your Name"
+    email: "your_email@example.com"
+    url: "https://example.com"
+
+repository:
+  type: "git"
+  url: "https://github.com/your_username/devbox.git"
+
+bugs:
+  url: "https://github.com/your_username/devbox/issues"
+
+homepage: "https://github.com/your_username/devbox"
+
+scripts:
+  test: "jest"
+  build: "rollup -c"
+
+devDependencies:
+  @rollup/plugin-commonjs: "^17.0.0"
+  @rollup/plugin-node-resolve: "^11.2.0"
+  @rollup/plugin-replace: "^2.4.2"
+  @rollup/plugin-typescript: "^5.0.2"
+  @types/jest: "^27.0.1"
+  jest: "^27.0.5"
+  rollup: "^2.53.3"
+  typescript: "^4.3.2"
+  tsconfig-paths: "^3.10.0"
+  vite: "^2.3.4"
+  vite-plugin-react-refresh: "^1.0.2"
+  vite-plugin-styled-components: "^1.0.1"
+  vite-plugin-windicss: "^1.6.1"
+  windicss: "^1.6.0"
+  windicss-plugin-tooling: "^1.6.0"
+  windicss-reset: "^1.6.0"
+  windicss-utilities: "^1.6.0"
+  windicss-utils: "^1.6.0"
+  windicss-validator: "^1.6.0"
+  windicss-webpack-plugin: "^1.6.0"
+  windicss-writer: "^1.6.0"
+  windicss-writer-json: "^1.6.0"
+  windicss-writer-postcss: "^1.6.0"
+  windicss-writer-sass: "^1.6.0"
+  windicss-writer-styled-components: "^1.6.0"
+  windicss-writer-tailwind: "^1.6.0"
+  windicss-writer-vue: "^1.6.0"
+  windicss-writer-vue-jsx: "^1.6.0"
+  windicss-writer-vue-tsx: "^1.6.0"
+  windicss-writer-vue-tsx-script: "^1.6.0"
+  windicss-writer-vue-tsx-style: "^1.6.0"
+  windicss-writer-vue-tsx-template: "^1.6.0"
+  windicss-writer-vue-tsx-vite-plugin: "^1.6.0"
+  windicss-writer-vue-tsx-vite-plugin-vue: "^1.6.0"
+  windicss-writer-vue-tsx-vite-plugin-vue-jsx: "^1.6.0"
+  windicss-writer-vue-tsx-vite-plugin-vue-tsx-script: "^1.6.0"
+  windicss-writer-vue-tsx-vite-plugin-vue-tsx-style: "^1.6.0"
+  windicss-writer-vue-tsx-vite-plugin-vue-tsx-template: "^1.6.0"
+  
+  # Add your dependencies here
+
+  # Example:
+  # axios: "^0.21.1"
+  # react: "^17.0.2"
+  # react-dom: "^17.0.2"
+  # react-router-dom: "^5.2.0"
+  # styled-components: "^5.3.1"
+  # your-dependency: "^1.0.0"
+
+
+  # Add your devDependencies here
+
+  # Example:
+  # @testing-library/react: "^10.4.9"
+  # @testing-library/jest-dom: "^5.11.9"
+  # eslint: "^7.31.0"
+  # eslint-config-react-app: "^5.2.1"
+  # eslint-plugin-react: "^7.23.2"
+  # eslint-plugin-react-hooks: "^4.2.0"
+  # prettier: "^2.3.2"
+  # rollup-plugin-terser: "^7.0.2"
+  # ts-jest: "^27.0.5"
+  # vite-plugin-react-refresh: "^1.0.2"
+  # vite-plugin-styled-components: "^1.0.1"
+  # vite-plugin-windicss: "^1.6.1"
+  # windicss: "^1.6.0"
+  # windicss-plugin-tooling: "^1.6.0"
+  # windicss-reset: "^1.6.0"
+  # windicss-utilities: "^1.6.0"
+  # windicss-utils: "^1.6.0"
+  # windicss-validator: "^1.6.0"
+  # windicss-webpack-plugin: "^1.6.0"
+  # windicss-writer: "^1.6.0"
+  # windicss-writer-json: "^1.6.0"
+  # windicss-writer-postcss: "^1.6.0"
+  # windicss-writer-sass: "^1.6.0"
+  # windicss-writer-styled-components: "^1.6.0"
+  # windicss-writer-tailwind: "^1.6.0"
+  # windicss-writer-vue: "^1.6.0"
+  # windicss-writer-vue-jsx: "^1.6.0"
+  # windicss-writer-vue-tsx: "^1.6.0"
+  # windicss-writer-vue-tsx-script: "^1.6.0"
+  # windicss-writer-vue-tsx-style: "^1.6.0"
+  # windicss-writer-vue-tsx-template: "^1.6.0"
+  # windicss-writer-vue-tsx-vite-plugin: "^1.6.0"
+  # windicss-writer-vue-tsx-vite-plugin-vue: "^1.6.0"
+  # windicss-writer-vue-tsx-vite-plugin-vue-jsx: "^1.6.0"
+  # windicss-writer-vue-tsx-vite-plugin-vue-tsx-script: "^1.6.0"
+  # windicss-writer-vue-tsx-vite-plugin-vue-tsx-style: "^1.6.0"
+  # windicss-writer-vue-tsx-vite-plugin-vue-tsx-template: "^1.6.0"
+  # Add your dependencies here
+  

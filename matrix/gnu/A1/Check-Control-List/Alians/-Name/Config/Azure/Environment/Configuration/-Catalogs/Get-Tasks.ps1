@@ -1,0 +1,27 @@
+#!/home/admin/app/PowerShell/Members
+
+# Alians Add for Powershell commands for non-Admin users
+Set-Alias ll 'Get-ChildItem -File'
+Set-Alias la 'Get-ChildItem -Directory'
+Set-Alias lla 'Get-ChildItem -File -Recurse'
+Set-Alias lld 'Get-ChildItem -Directory -Recurse'
+Set-Alias lldl 'Get-ChildItem -File -Recurse -Directory'
+Set-Alias lldld 'Get-ChildItem -File -Recurse -Directory -Recurse'
+Set-Alias llm 'Get-Content'
+Set-Alias lle 'Set-Content'
+Set-Alias llr 'Remove-Item'
+Set-Alias llrm 'Remove-Item -Recurse'
+Set-Alias lls 'New-Item'
+Set-Alias llsd 'New-Item -ItemType Directory'
+Set-Alias llsg 'Get-Service'
+Set-Alias llsga 'Get-Service | Where-Object { $_.Status -eq 'Running' }'
+Set-Alias llsgrm 'Get-Service | Stop-Service'
+Set-Alias llsgrms 'Get-Service | Start-Service'
+Set-Alias llsgrmi 'Get-Service | Restart-Service'
+Set-Alias llsgrmi 'Get-Service | Restart-Service -Force'
+Set-Alias llsgri 'Get-Service | Restart-Service -Force -Confirm:$false'
+Set-Alias llsgrmim 'Get-Service | Restart-Service -Force -Confirm:$false -PassThru'
+Set-Alias llsgrmiim 'Get-Service | Restart-Service -Force -Confirm:$false -PassThru | Restart-Service'
+Set-Alias llsgrmiim 'Get-Service | Restart-Service -Force -Confirm:$false -PassThru | Restart-Service -Force'
+Set-Alias llsgrmiim 'Get-Service | Restart-Service -Force -Confirm:$false -PassThru | Restart-Service -Force -PassThru'
+
