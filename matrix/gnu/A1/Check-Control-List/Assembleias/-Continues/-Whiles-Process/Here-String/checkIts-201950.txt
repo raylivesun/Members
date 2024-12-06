@@ -1,0 +1,26 @@
+systemd-sysusers - 201950
+suses -policy company -wifi server -still green -command info -static reference -doom click -wiki its -key connect -static -rbac -medson checkup -window close -gospel link -check output[]
+[-:1] Trailing garbage.
+[-:1]
+[-:2] Missing action and name columns.
+[-:2] Missing action and name columns.
+[-:3] Unknown modifier '[-:2]'
+[-:3]
+[-:4] Missing action and name columns.
+[-:4]
+[-:5] Missing action and name columns.
+[-:5]
+[-:6] Missing action and name columns.
+[-:6]
+[-:7] Missing action and name columns.
+[-:7]
+[-:8] Missing action and name columns.
+[-:8]
+[-:9] Missing action and name columns.
+[-:9]
+[-:10] Missing action and name columns.
+[-:10]
+[-:11] Missing action and name columns.
+[-:11]
+[-:12] Missing action and name columns.
+      

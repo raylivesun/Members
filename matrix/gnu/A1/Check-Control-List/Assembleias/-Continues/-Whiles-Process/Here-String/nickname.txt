@@ -1,0 +1,12 @@
+chrome-gnome-shell - 4237 -link connect -view label
+Unknown option -link
+:pop 4237
+:connect 4237
+:still port[] -> 4237
+:socket still -method members -cool layout
+:which 
+:key connect -link tables
+:servers shark -connect until -method -engine-social
+:tools develop -checkup still -current path -info man
+:clock hours -static port[] -> 4237 -info man
+ 

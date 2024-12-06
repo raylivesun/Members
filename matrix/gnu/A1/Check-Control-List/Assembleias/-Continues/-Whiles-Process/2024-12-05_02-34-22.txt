@@ -1,0 +1,304 @@
+Current user: admin
+Current directory: /home/admin/app/PowerShell/Members/matrix/gnu/A1/Check-Control-List/Assembleias/-Continues/-Whiles-Process
+All users on the system:
+All running processes:
+2256: (sd-pam) - 
+617: accounts-daemon - 
+618: acpid - 
+2366: at-spi-bus-launcher - /usr/libexec/at-spi-bus-launcher
+2587: at-spi2-registryd - /usr/libexec/at-spi2-registryd
+668: avahi-daemon: chroot helper - 
+620: avahi-daemon: running [pop-os.local] - 
+38225: bash - /usr/bin/bash
+38228: bash - /usr/bin/bash
+38231: bash - /usr/bin/bash
+71944: bash - /usr/bin/bash
+1030: bluetoothd - 
+169: card1-crtc0 - 
+170: card1-crtc1 - 
+171: card1-crtc2 - 
+70754: chrome_crashpad_handler - /usr/share/code/chrome_crashpad_handler
+777: chronyd - 
+788: chronyd - 
+70729: code - /usr/share/code/code
+70802: code - /usr/share/code/code
+71038: code - /usr/share/code/code
+71222: code - /usr/share/code/code
+71354: code - /usr/share/code/code
+70768: Code --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --shared-files --field-trial-handle=3,i,17276545258607962412,17455083189686919968,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version - /usr/share/code/code
+70787: Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,17276545258607962412,17455083189686919968,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version - /usr/share/code/code
+70831: Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,17276545258607962412,17455083189686919968,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version - /usr/share/code/code
+70847: Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,17276545258607962412,17455083189686919968,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version - /usr/share/code/code
+70868: Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,17276545258607962412,17455083189686919968,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version - /usr/share/code/code
+70869: Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,17276545258607962412,17455083189686919968,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version - /usr/share/code/code
+71193: Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,17276545258607962412,17455083189686919968,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version - /usr/share/code/code
+70733: code --type=zygote - /usr/share/code/code
+70735: code --type=zygote - /usr/share/code/code
+70732: code --type=zygote --no-zygote-sandbox - /usr/share/code/code
+838: colord - 
+71179: cpptools - /home/admin/.vscode/extensions/ms-vscode.cpptools-1.23.1-linux-x64/bin/cpptools
+21: cpuhp/0 - 
+22: cpuhp/1 - 
+28: cpuhp/2 - 
+34: cpuhp/3 - 
+38341: crashpad_handler - /opt/warpdotdev/warp-terminal/crashpad_handler
+624: cron - 
+81049: cups-browsed - 
+81046: cupsd - 
+615: dbus-broker - 
+2278: dbus-broker - /usr/bin/dbus-broker
+2372: dbus-broker - /usr/bin/dbus-broker
+614: dbus-broker-launch - 
+2272: dbus-broker-launch - /usr/bin/dbus-broker-launch
+2371: dbus-broker-launch - /usr/bin/dbus-broker-launch
+2469: dconf-service - /usr/libexec/dconf-service
+585: dmcrypt_write/252:0 - 
+68: ecryptfs-kthread - 
+57018: evince - /usr/bin/evince
+57042: evinced - /usr/libexec/evinced
+2528: evolution-addressbook-factory - /usr/libexec/evolution-addressbook-factory
+2611: evolution-alarm-notify - /usr/libexec/evolution-data-server/evolution-alarm-notify
+2494: evolution-calendar-factory - /usr/libexec/evolution-calendar-factory
+2461: evolution-source-registry - /usr/libexec/evolution-source-registry
+837: execsnoop-bpfcc - 
+2927: firefox-bin - /usr/lib/firefox/firefox-bin
+33595: flatpak-session-helper - /usr/libexec/flatpak-session-helper
+2994: forkserver - /usr/lib/firefox/firefox-bin
+2560: fusermount3 - 
+2273: fwupd - 
+2239: gdm-session-wor - 
+2295: gdm-x-session - /usr/libexec/gdm-x-session
+839: gdm3 - 
+2466: geoclue - 
+2584: gjs - /usr/bin/gjs-console
+2769: gjs - /usr/bin/gjs-console
+91366: gjs - /usr/bin/gjs-console
+2275: gnome-keyring-daemon - /usr/bin/gnome-keyring-daemon
+2311: gnome-session-binary - /usr/libexec/gnome-session-binary
+2402: gnome-session-binary - /usr/libexec/gnome-session-binary
+2383: gnome-session-ctl - /usr/libexec/gnome-session-ctl
+2430: gnome-shell - /usr/bin/gnome-shell
+2453: gnome-shell-calendar-server - /usr/libexec/gnome-shell-calendar-server
+75954: gnome-terminal-server - /usr/libexec/gnome-terminal-server
+2468: goa-daemon - /usr/libexec/goa-daemon
+2512: goa-identity-service - /usr/libexec/goa-identity-service
+2600: gsd-a11y-settings - /usr/libexec/gsd-a11y-settings
+2605: gsd-color - /usr/libexec/gsd-color
+2606: gsd-datetime - /usr/libexec/gsd-datetime
+2656: gsd-disk-utility-notify - /usr/libexec/gsd-disk-utility-notify
+2607: gsd-housekeeping - /usr/libexec/gsd-housekeeping
+2610: gsd-keyboard - /usr/libexec/gsd-keyboard
+2615: gsd-media-keys - /usr/libexec/gsd-media-keys
+2618: gsd-power - /usr/libexec/gsd-power
+2622: gsd-print-notifications - /usr/libexec/gsd-print-notifications
+2710: gsd-printer - /usr/libexec/gsd-printer
+2626: gsd-rfkill - /usr/libexec/gsd-rfkill
+2627: gsd-screensaver-proxy - /usr/libexec/gsd-screensaver-proxy
+2629: gsd-sharing - /usr/libexec/gsd-sharing
+2630: gsd-smartcard - /usr/libexec/gsd-smartcard
+2640: gsd-sound - /usr/libexec/gsd-sound
+2646: gsd-wacom - /usr/libexec/gsd-wacom
+2651: gsd-xsettings - /usr/libexec/gsd-xsettings
+2482: gvfs-afc-volume-monitor - /usr/libexec/gvfs-afc-volume-monitor
+2504: gvfs-goa-volume-monitor - /usr/libexec/gvfs-goa-volume-monitor
+2490: gvfs-gphoto2-volume-monitor - /usr/libexec/gvfs-gphoto2-volume-monitor
+2498: gvfs-mtp-volume-monitor - /usr/libexec/gvfs-mtp-volume-monitor
+2472: gvfs-udisks2-volume-monitor - /usr/libexec/gvfs-udisks2-volume-monitor
+2393: gvfsd - /usr/libexec/gvfsd
+34702: gvfsd-dnssd - /usr/libexec/gvfsd-dnssd
+2401: gvfsd-fuse - /usr/libexec/gvfsd-fuse
+5820: gvfsd-http - /usr/libexec/gvfsd-http
+2481: gvfsd-metadata - /usr/libexec/gvfsd-metadata
+34680: gvfsd-network - /usr/libexec/gvfsd-network
+2543: gvfsd-trash - /usr/libexec/gvfsd-trash
+2667: hidpi-daemon - /usr/bin/python3.10
+2664: hidpi-notification - /usr/bin/python3.10
+90794: hwrng - 
+2603: ibus-daemon - /usr/bin/ibus-daemon
+2780: ibus-engine-simple - /usr/libexec/ibus-engine-simple
+2713: ibus-extension-gtk3 - /usr/libexec/ibus-extension-gtk3
+2712: ibus-memconf - /usr/libexec/ibus-memconf
+2728: ibus-portal - /usr/libexec/ibus-portal
+2717: ibus-x11 - /usr/libexec/ibus-x11
+20: idle_inject/0 - 
+23: idle_inject/1 - 
+29: idle_inject/2 - 
+35: idle_inject/3 - 
+70: irq/122-aerdrv - 
+71: irq/123-aerdrv - 
+166: irq/131-i2c_hid_acpi - 
+90735: irq/138-mei_me - 
+156: irq/51-DELL078B:00 - 
+55: irq/9-acpi - 
+3667: Isolated Web Co - /usr/lib/firefox/firefox-bin
+267: jbd2/sda1-8 - 
+43: kauditd - 
+48: kcompactd0 - 
+40: kdevtmpfs - 
+50: khugepaged - 
+44: khungtaskd - 
+1221: krfcommd - 
+49: ksmd - 
+15: ksoftirqd/0 - 
+25: ksoftirqd/1 - 
+31: ksoftirqd/2 - 
+37: ksoftirqd/3 - 
+67: kswapd0 - 
+2: kthreadd - 
+91429: kworker/0:0-i915-unordered - 
+9: kworker/0:0H-events_highpri - 
+92055: kworker/0:1-i915-unordered - 
+66: kworker/0:1H-events_highpri - 
+90150: kworker/0:2-i915-unordered - 
+91463: kworker/1:0 - 
+27: kworker/1:0H-events_highpri - 
+75: kworker/1:1H-events_highpri - 
+90740: kworker/1:3-i915-unordered - 
+92029: kworker/2:0-i915-unordered - 
+33: kworker/2:0H-events_highpri - 
+133: kworker/2:1H-kblockd - 
+86300: kworker/2:2-events - 
+90965: kworker/2:3-events - 
+91156: kworker/3:0-events - 
+39: kworker/3:0H-events_highpri - 
+90690: kworker/3:1-mm_percpu_wq - 
+132: kworker/3:1H-events_highpri - 
+72: kworker/R-acpi_ - 
+58: kworker/R-ata_s - 
+53: kworker/R-blkcg - 
+560: kworker/R-cfg80 - 
+100: kworker/R-charg - 
+91: kworker/R-crypt - 
+62: kworker/R-devfr - 
+61: kworker/R-edac- - 
+268: kworker/R-ext4- - 
+41: kworker/R-inet_ - 
+76: kworker/R-ipv6_ - 
+52: kworker/R-kbloc - 
+583: kworker/R-kcryp - 
+584: kworker/R-kcryp - 
+579: kworker/R-kdmfl - 
+51: kworker/R-kinte - 
+553: kworker/R-kmems - 
+84: kworker/R-kstrp - 
+69: kworker/R-kthro - 
+59: kworker/R-md - 
+60: kworker/R-md_bi - 
+74: kworker/R-mld - 
+11: kworker/R-mm_pe - 
+6: kworker/R-netns - 
+201: kworker/R-raid5 - 
+4: kworker/R-rcu_g - 
+165: kworker/R-rmi4- - 
+153: kworker/R-scsi_ - 
+155: kworker/R-scsi_ - 
+5: kworker/R-slub_ - 
+57: kworker/R-tpm_d - 
+167: kworker/R-ttm - 
+47: kworker/R-write - 
+91350: kworker/u16:0-flush-8:0 - 
+91421: kworker/u16:1-kcryptd/252:0 - 
+90733: kworker/u16:39-kcryptd/252:0 - 
+90736: kworker/u16:41-events_unbound - 
+90702: kworker/u16:9-kcryptd/252:0 - 
+92062: kworker/u17:0-i915_flip - 
+91411: kworker/u17:1-i915_flip - 
+87664: kworker/u17:2-i915_flip - 
+19: migration/0 - 
+24: migration/1 - 
+30: migration/2 - 
+36: migration/3 - 
+683: ModemManager - 
+631: networkd-dispatcher - 
+616: NetworkManager - 
+45: oom_reaper - 
+33599: p11-kit-server - /usr/libexec/p11-kit/p11-kit-server
+1789: packagekitd - 
+2265: pipewire - /usr/bin/pipewire
+2270: pipewire-pulse - /usr/bin/pipewire
+632: polkitd - 
+3: pool_workqueue_release - 
+1073: pop-system-updater - 
+2890: pop-system-updater - /usr/bin/pop-system-updater
+867: postgres - 
+868: postgres - 
+930: postgres - 
+931: postgres - 
+1809: postgres - 
+1810: postgres - 
+1811: postgres - 
+1812: postgres - 
+1813: postgres - 
+1814: postgres - 
+1824: postgres - 
+1825: postgres - 
+1826: postgres - 
+3021: Privileged Cont - /usr/lib/firefox/firefox-bin
+38218: ps - 
+72119: pwsh - /snap/powershell/277/opt/powershell/pwsh
+75977: pwsh - /snap/powershell-preview/163/opt/powershell/pwsh
+2853: python3 - 
+70906: R - /usr/lib/R/bin/exec/R
+71055: R - /usr/lib/R/bin/exec/R
+71064: R - /usr/lib/R/bin/exec/R
+71105: R - /usr/lib/R/bin/exec/R
+71107: R - /usr/lib/R/bin/exec/R
+71109: R - /usr/lib/R/bin/exec/R
+71112: R - /usr/lib/R/bin/exec/R
+18: rcu_exp_gp_kthread_worker - 
+17: rcu_exp_par_gp_kthread_worker/0 - 
+16: rcu_preempt - 
+12: rcu_tasks_kthread - 
+13: rcu_tasks_rude_kthread - 
+14: rcu_tasks_trace_kthread - 
+3328: RDD Process - /usr/lib/firefox/firefox-bin
+635: rsyslogd - 
+1091: rtkit-daemon - 
+152: scsi_eh_0 - 
+154: scsi_eh_1 - 
+4446: sd_dummy - /usr/lib/speech-dispatcher-modules/sd_dummy
+4442: sd_espeak-ng - /usr/lib/speech-dispatcher-modules/sd_espeak-ng
+4439: sd_espeak-ng-mb - 
+2599: sh - /usr/bin/dash
+649: snapd - 
+2998: Socket Process - /usr/lib/firefox/firefox-bin
+4428: speech-dispatcher - /usr/bin/speech-dispatcher
+655: switcheroo-control - 
+621: system76-power - 
+622: system76-scheduler - 
+1020: system76-scheduler - 
+1: systemd - 
+2253: systemd - /usr/lib/systemd/systemd
+326: systemd-journald - 
+662: systemd-logind - 
+492: systemd-resolved - 
+370: systemd-udevd - 
+71239: TabNine - /home/admin/.config/Code/User/globalStorage/tabnine.tabnine-vscode/binaries/4.209.0/x86_64-unknown-linux-musl/TabNine
+71284: TabNine - /home/admin/.config/Code/User/globalStorage/tabnine.tabnine-vscode/binaries/4.209.0/x86_64-unknown-linux-musl/TabNine
+72206: TabNine-deep-cloud - /home/admin/.config/Code/User/globalStorage/tabnine.tabnine-vscode/binaries/4.209.0/x86_64-unknown-linux-musl/TabNine-deep-cloud
+71453: TabNine-server-runner - /home/admin/.config/Code/User/globalStorage/tabnine.tabnine-vscode/binaries/4.209.0/x86_64-unknown-linux-musl/TabNine-server-runner
+663: thermald - 
+664: touchegg - 
+2632: touchegg - /usr/bin/touchegg
+2782: tracker-miner-fs-3 - /usr/libexec/tracker-miner-fs-3
+665: udisksd - 
+784: upowerd - 
+3180: Utility Process - /usr/lib/firefox/firefox-bin
+71455: vdb - /home/admin/.local/share/TabNine/servers/vdb/1.7.3-fix.1/download/vdb
+38160: warp - /opt/warpdotdev/warp-terminal/warp
+38170: warp - /opt/warpdotdev/warp-terminal/warp
+38157: warp-terminal - /opt/warpdotdev/warp-terminal/warp
+64: watchdogd - 
+86372: WD-TabNine - /home/admin/.config/Code/User/globalStorage/tabnine.tabnine-vscode/binaries/4.209.0/x86_64-unknown-linux-musl/WD-TabNine
+3096: WebExtensions - /usr/lib/firefox/firefox-bin
+2269: wireplumber - /usr/bin/wireplumber
+666: wpa_supplicant - 
+2551: xdg-desktop-portal - /usr/libexec/xdg-desktop-portal
+2563: xdg-desktop-portal-gnome - /usr/libexec/xdg-desktop-portal-gnome
+2779: xdg-desktop-portal-gtk - /usr/libexec/xdg-desktop-portal-gtk
+2555: xdg-document-portal - /usr/libexec/xdg-document-portal
+2449: xdg-permission-store - /usr/libexec/xdg-permission-store
+2297: Xorg - /usr/lib/xorg/Xorg
+All network connections:
+All installed applications:
+All scheduled tasks:

@@ -1,0 +1,4 @@
+ecryptfs-verify -.c
+trank trip
+select -key count -ssa link
+rooms 4237 -link connect -view label
