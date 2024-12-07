@@ -1,0 +1,2 @@
+$ValidateRange = {18,250}
+Set-Age 45 -ValidateRange $ValidateRange

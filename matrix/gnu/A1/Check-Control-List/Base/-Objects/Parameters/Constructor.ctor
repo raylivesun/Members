@@ -1,0 +1,14 @@
+# Section 13.1: Listing available constructors for a class
+# Version ≥ 5.0
+# In PowerShell 5.0+ you can list available constructors by calling 
+# the static new-method without parentheses.
+
+
+# Get the constructors of the 'Person' class
+$constructors = [Person].GetConstructors()
+
+# Print the constructors
+foreach ($constructor in $constructors) {
+    Write-Host "Constructor: $($constructor.Name)"
+}
+

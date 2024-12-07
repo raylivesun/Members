@@ -1,0 +1,2 @@
+# Call the 'Get-ConstructorInfo' function with the 'Person' class
+Get-ConstructorInfo -type Person

@@ -1,0 +1,17 @@
+function Get-ConstructorInfo {
+    param(
+        [Parameter(Mandatory=$true)]
+        [type]$type
+    )
+
+    # Get the constructors of the specified type
+    $constructors = $type.GetConstructors()
+
+    # Print the constructors
+    foreach ($constructor in $constructors) {
+        Write-Host "Constructor: $($constructor.Name)"
+    }
+
+    # Return the constructors
+    return $constructors
+}
