@@ -1,0 +1,7 @@
+===========================================================================
+Diameter Service Response Time Statistics - :
+Index  Procedure  Calls  Min SRT (s)  Max SRT (s)  Avg SRT (s)  Sum SRT (s)
+---------------------------------------------------------------------------
+Diameter Requests
+Diameter Requests
+---------------------------------------------------------------------------

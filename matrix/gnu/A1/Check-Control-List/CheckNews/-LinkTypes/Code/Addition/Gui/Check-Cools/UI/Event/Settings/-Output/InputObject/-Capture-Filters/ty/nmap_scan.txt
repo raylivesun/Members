@@ -1,0 +1,13 @@
+# Nmap 7.80 scan initiated Tue Dec 10 07:47:45 2024 as: /usr/bin/nmap -sV -p- -oN nmap_scan.txt 192.168.1.0/24
+Nmap scan report for 192.168.1.200
+Host is up (0.0035s latency).
+Not shown: 65531 closed ports
+PORT     STATE SERVICE        VERSION
+222/tcp  open  ssh            MikroTik RouterOS sshd (protocol 2.0)
+2000/tcp open  bandwidth-test MikroTik bandwidth-test server
+8291/tcp open  unknown
+8728/tcp open  routeros-api   MikroTik RouterOS API
+Service Info: OSs: Linux, RouterOS; Device: router; CPE: cpe:/o:mikrotik:routeros
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Dec 10 07:55:38 2024 -- 256 IP addresses (1 host up) scanned in 472.35 seconds
